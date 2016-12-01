@@ -1,4 +1,3 @@
-/*! touchjs v0.2.14  2014-08-05 */
 'use strict';
 (function(root, factory) {
     if (typeof define === 'function' && (define.amd || define.cmd)) {
