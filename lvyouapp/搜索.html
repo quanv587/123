@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>旅游首页</title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		function resize(originSize,type){
+   				var type=type||"x";
+   				var clientW=document.documentElement.clientWidth;
+   				var clientH=document.documentElement.clientHeight;
+   				if(type=="x"){
+   					var scale=clientW/originSize*100;
+   				}else if(type=="y"){
+   					var scale=clientH/originSize*100;
+   				}
+   				
+   				var html=document.getElementsByTagName("html")[0];
+   				html.style.fontSize=scale+"px";
+   	    }
+    </script>
+    <link rel="stylesheet" href="css/搜索.css" />
+</head>
+<body>
+	<header>
+		<a class="sou-fan" href="index.html"><img src="img/left.png" alt="" /></a>
+		<span>搜索</span>
+	</header>
+	<div class="index">
+		<div class="big">
+		<div class="sousuo">
+			<img src="img/search.png" alt="" />
+			<input type="text" />
+			<button value="搜索">搜索</button>
+		</div>
+		<div class="sousuo-con">
+			<div class="sou">	
+				<img src="img/long.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>北京万里长城</p>
+			</div>
+			<div class="sou">	
+				<img src="img/bdlg.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>布达拉宫</p>
+			</div>
+			<div class="sou">	
+				<img src="img/niao.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			   <p>北京鸟巢</p>
+			</div>
+		</div>
+		<div class="sousuo-con">
+			<div class="sou">	
+				<img src="img/guilin.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>桂林</p>
+			</div>
+			<div class="sou">	
+				<img src="img/gg.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>北京故宫</p>
+			</div>
+			<div class="sou">	
+				<img src="img/gulangyu.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			   <p>鼓浪屿</p>
+			</div>
+		</div>
+		<div class="sousuo-con">
+			<div class="sou">	
+				<img src="img/long.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>北京万里长城</p>
+			</div>
+			<div class="sou">	
+				<img src="img/huangshan.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			    <p>黄山</p>
+			</div>
+			<div class="sou">	
+				<img src="img/hangzhou.jpg" alt=""  style="width:2rem;margin-top:0.2rem"/>
+			   <p>杭州西湖</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<footer>
+		<a href="list2.html">
+			<p>推荐景点</p>
+		</a>
+		<a href="">
+			<p>城市攻略</p>
+		</a>
+		<a href="person.html">
+			<p>我的导览</p>
+		</a>
+	</footer>
+</body>
+<script language="javascript"> 
+
+   window.onload=function(){
+    	resize(750)
+   
+    }
+
+</script>
+</html>

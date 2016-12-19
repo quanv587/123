@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script type="text/javascript">
+    	function resize(originSize,type){
+   			var type=type||"x";
+   			if(type=="x"){
+   				var width=document.documentElement.clientWidth;//逻辑像素
+   				var scale=width/originSize*100;
+   			}else if(type=="y"){
+   				var height=document.documentElement.clientHeight//逻辑像素
+   				console.log(height)
+   				var scale=height/originSize*100;
+   			}
+   			
+   			document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+   		}  
+   		window.onload=function(){
+		resize(750);
+		var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+                // 如果需要分页器
+            pagination: '.swiper-pagination',
+
+                        
+              onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+              	swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+              }, 
+              onSlideChangeEnd: function(swiper){ 
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+              }
+            
+  }) 
+		}
+    </script>
+</head>
+<style>
+    body,html{
+		padding:0;margin:0;width:100%;height: 100%;font-family: "微软雅黑";
+	}
+	.swiper-container{
+		width:100%;height: 100%;
+	}
+	.swiper-wrapper{
+		width:100%;height: 100%;
+	}
+	.swiper-slide{
+		width:100%;height: 100%;position: relative;
+		/*background:#F13641;*/
+	}
+
+	/*.power{
+		width:100%;
+		height:0.4rem;background:url(images/sousuo02.png);
+		background-size: cover;
+	}*/
+/*1.*/
+.shouye{
+	width:100%;height: 1.05rem;background:#ff4258;
+	position: relative;
+}
+.shouyecon{
+	width:6.5rem;height: 0.8rem;margin-left: 0.5rem;
+	display:flex;justify-content: space-between;
+	position: absolute;left:0;top:0.2rem;
+}
+.sycon1{
+	width:0.62rem;height: 0.49rem;background: url(images/shouye01.png);
+	background-size: cover;
+}
+.sycon2{
+	background: url(images/shouye02.png);width:0.6rem;height: 0.5rem;
+	background-size: cover;
+}
+.syzi{
+	font-size: 0.5rem;color:#fff;font-weight: 500;letter-spacing: 0.1rem;
+}
+.liebiao{
+	width:6.5rem;height:0.8rem;background: #fff;margin-left: 0.5rem;
+	line-height: 0.8rem;display:flex;justify-content: space-between;
+}
+.liebiao div{
+	float:left;
+	font-size: 0.35rem;
+}
+.zhengzhi{
+	color:#dc394c;margin-left: 0.15rem;
+}
+.jingxuan{
+	border-bottom: 0.06rem solid#dc394c;
+}
+.lunbo{
+	width:7.5rem;height: 3.70rem;
+}
+.new1{
+	width:100%;height: 100%;;
+	background: url(images/xinwen1.jpg) no-repeat;
+	background-size:7.5rem 3.7rem;
+}
+.zuixinzi{
+	width:6.5rem;height: 1rem;font-size: 0.4rem;line-height: 1rem;
+	margin-left:0.5rem;letter-spacing: 0.05rem;
+}
+.zuixin{
+	width:100%;height: 1.65rem;position:relative;
+}
+.zxtu1{
+	width:1.8rem;height: 1.35rem;
+	position: absolute;left:0.22rem;top:0;
+	background: url(images/liebiao1.jpg);
+	background-size:1.8rem 1.35rem;
+}
+.zxtu2{
+	width:1.8rem;height: 1.35rem;
+	position: absolute;left:0.22rem;top:0;
+	background: url(images/liebiao2.jpg);
+	background-size:1.8rem 1.35rem;
+}
+.zxtu3{
+	width:1.8rem;height: 1.35rem;
+	position: absolute;left:0.22rem;top:0;
+	background: url(images/liebiao3.jpg);
+	background-size:1.8rem 1.35rem;
+}
+.zxtu4{
+	width:1.8rem;height: 1.35rem;
+	position: absolute;left:0.22rem;top:0;
+	background: url(images/liebiao4.jpg);
+	background-size:1.8rem 1.35rem;
+}
+.zxtitle1{
+	font-size:0.35rem;position:absolute;left:2.48rem;
+}
+.difang1{
+	font-size:0.24rem;position:absolute;left:2.48rem;bottom:0;color:#999;
+	margin-bottom: 0.24rem;
+}
+.shuliang{
+	font-size:0.24rem;position:absolute;left:5.75rem;bottom:0;color:#999;
+	margin-bottom: 0.24rem;
+}
+.pingluncon{
+	width:0.4rem;height: 0.4rem;
+	background:url(images/xiaoxi.jpg);background-size: 0.4rem 0.4rem;
+	position:absolute;right:0.76rem;bottom:0;
+	margin-bottom: 0.2rem;
+}
+/*3.*/
+.tttitle{
+	width:100%;height: 0.8rem;background: #A0A0A0;
+	position: relative;
+}
+.toutiao1{
+	width:1.3rem;height:100%;line-height: 0.8rem;
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	font-size: 0.5rem;color:#333;font-weight: 500;letter-spacing: 0.15rem;
+}
+.guanbi{
+    width:1rem;height:100%;float:left;
+    margin-left: 0.5rem;line-height: 0.8rem;
+	font-size: 0.7rem;color:red;font-weight: 400;
+}
+.ttbt{
+	width:100%;height:1rem;font-size:0.5rem;letter-spacing: 0.08rem;
+	text-align: center;line-height: 1rem;background: #E9E9E9;
+}
+.ttneirong{
+	width:100%;height: 10.94rem;background:#E9E9E9;
+	font-size:0.3rem;line-height: 0.5rem;letter-spacing: 0.02rem;
+}
+.laiyuan{
+	width:100%;height: 0.5rem;font-size: 0.2rem;line-height: 0.5rem;
+	color:#999999;
+}
+.ttneirong span{
+	display: block;
+	text-indent:2em;
+}
+/*5.*/
+.swiper-wrapper .swiper-slide:nth-child(5){
+	background:#e9e9e9;
+}
+.sousuolan{
+	width:100%;height: 1.05rem;background:#ff4258;
+	position: relative;
+}
+.sousuo{
+	position: absolute;
+	left:0;right:0;top:0;bottom: 0;margin: auto;
+	width:5.04rem;height:0.55rem;background: #ff6b7c;
+	border-radius: 0.4rem;margin-left: 0.5rem;
+}
+.sousuoicon{
+	width:0.5rem;height: 0.4rem;
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left:0.15rem;
+	background: url(images/sousuo03.png) no-repeat;
+	background-size: cover;
+}
+.zi{
+	font-size: 0.18rem;text-align: center;line-height: 0.55rem;
+	color:#fff;margin-left: 0.1rem;
+}
+.quxiao{
+	width:.0.54rem;height: 0.36rem;color:#000000;font-size: 0.3rem;
+	text-align:center;line-height: 0.36rem;
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+    font-weight:500;margin-left: 6.3rem;letter-spacing: 0.10rem;
+}
+.jianpan{
+	width:100%;height: 4.32rem;position:absolute;left:0;bottom:0;
+	background: url(images/sousuo01.png) no-repeat;
+	background-size: cover;
+}
+.remen{
+	width:100%;height: 1rem;
+	font-size: 0.60rem;color:#000;
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-top: 2.2rem;text-align: center;letter-spacing: 0.14rem;
+}
+.xian1{
+	width:6.5rem;height: 0.03rem;background: #a0a0a0;
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-top: 3.5rem;
+}
+.remen1{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:4.5rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:4rem;
+}
+.remen2{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:1.5rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:5rem;
+}
+.remen3{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:2rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:5rem; margin-left: 2.5rem;
+}
+.remen4{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:1.8rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:6rem;
+}
+.remen5{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:1.8rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:6rem;margin-left: 2.5rem;
+}
+.remen6{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+	margin-left: 0.5rem;
+	width:3rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:7rem;
+}
+.remen7{
+	position:absolute;left:0;right:0;top:0;bottom: 0;margin: auto;
+
+	width:3rem;height: 0.4rem;border-radius: 0.4rem;border: 2px solid #fff;
+	text-align: center;line-height: 0.4rem;font-size: 0.2rem;
+	margin-top:8rem;
+}
+
+</style>
+<body>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<div class="power"></div>
+        	<div class="shouye">
+        		<div class="shouyecon">
+        			<div class="sycon1"></div>
+        			<div class="syzi">热报</div>
+        			<div class="sycon2"></div>
+        		</div>
+        	</div>
+        	<div class="liebiao">
+        		<div class="toutiao">头条</div>
+        		<div class="jingxuan">精选</div>
+        		<div class="yule">娱乐</div>
+        		<div class="tiyu">体育</div>
+        		<div class="qiche">汽车</div>
+        		<div class="zhengzhi">更多>></div>
+        	</div>
+        	<div class="lunbo">
+        		<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<div class="new1"></div>
+                    </div>
+                    <!--<div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>-->
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                </div>
+        	</div>
+        	<div class="zuixincon">
+        		<div class="zuixinzi">最新精选</div>
+        		<div class="zuixin">
+        			<div class="zxtu1"></div>
+        			<div class="zxtitle1">中秋假期全国高速不免费</div>
+        			<div class="difang1">太原本地</div>
+        			<div class="pinglun">
+        				<div class="shuliang">2.3w</div>
+        				<div class="pingluncon"></div>
+        			</div>
+        		</div>
+        		<div class="zuixin">
+        			<div class="zxtu2"></div>
+        			<div class="zxtitle1">习近平致国际标准化组织大会</div>
+        			<div class="difang1">新华网</div>
+        			<div class="pinglun">
+        				<div class="shuliang">2.3w</div>
+        				<div class="pingluncon"></div>
+        			</div>
+        		</div>
+        		<div class="zuixin">
+        			<div class="zxtu3"></div>
+        			<div class="zxtitle1">支付宝提现于今年10.29日起收费 </div>
+        			<div class="difang1">互联网</div>
+        			<div class="pinglun">
+        				<div class="shuliang">2.3w</div>
+        				<div class="pingluncon"></div>
+        			</div>
+        		</div>
+        		<div class="zuixin">
+        			<div class="zxtu4"></div>
+        			<div class="zxtitle1">希拉里败选归咎于FBI</div>
+        			<div class="difang1">环球网</div>
+        			<div class="pinglun">
+        				<div class="shuliang">2.3w</div>
+        				<div class="pingluncon"></div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="power"></div>
+        	<div class="tttitle">
+        		<div class="toutiao1">头条</div>
+        	    <div class="guanbi">&lt;</div>
+        	</div>
+        	<div class="ttbt">iphone7秋季新闻发布会</div>
+        	<div class="ttneirong">
+        		<div class="laiyuan">2016-12-4 10:55 来源 互联网</div>
+        	<span>&nbsp;&nbsp;iphone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！ihone7于今年7月正式发布，其拥有强大的功能，尺寸完美，堪称经典！
+        		</span>
+        	</div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="power"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="power"></div>
+        </div>
+        <div class="swiper-slide">
+        	<div class="power"></div>
+        	<div class="sousuolan">
+        		<div class="sousuo">
+        			<div class="sousuoicon"></div>
+        			<div class="zi">请输入您想知道的新闻</div>
+        		</div>
+        		<div class="quxiao">取消</div>
+        	</div>
+        	<div class="sousuocon">
+        		<div class="remen">热门搜索</div>
+        		<div class="xian1"></div>
+        		<div class="remen1">习大大访问优逸客再被神秘人赶出去</div>
+        		<div class="remen2">iphone8</div>
+        		<div class="remen3">王宝强再婚</div>
+        		<div class="remen4">宋喆出家</div>
+        		<div class="remen5">马蓉出家</div>
+        		<div class="remen6">优逸客礼拜天补课</div>
+        		<div class="remen7">更多...</div>
+        	</div>
+        	<div class="jianpan"></div>
+        </div>
+    </div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>旅游首页</title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		function resize(originSize,type){
+   				var type=type||"x";
+   				var clientW=document.documentElement.clientWidth;
+   				var clientH=document.documentElement.clientHeight;
+   				if(type=="x"){
+   					var scale=clientW/originSize*100;
+   				}else if(type=="y"){
+   					var scale=clientH/originSize*100;
+   				}
+   				
+   				var html=document.getElementsByTagName("html")[0];
+   				html.style.fontSize=scale+"px";
+   	    }
+    </script>
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    
+    <link rel="stylesheet" href="css/find.css" />
+    <script src="js/swiper.min.js"></script>
+    
+    <script src="js/zepto.min.js"></script>
+</head>
+<style>
+	.swiper-container1{
+		width:100%;
+	}
+	.swiper-container1 .swiper-wrapper{
+		width:300%;    top: 0rem;
+	}
+/*	.banner .swiper-wrapper .swiper-slide{
+		top:-1.2rem;
+	}*/
+	#swiper-container2{
+		height:1.1rem;
+	}
+	#swiper-container2 .swiper-slide{
+		background: #547DF9;
+        height: 100%;
+        text-decoration: none;
+        position: relative;
+	}
+	#swiper-container2 .swiper-slide .swiper-wrapper{
+		width: 100%;
+        height: 1.1rem;
+        background: #547DF9;
+	}
+	#swiper-container2 .swiper-slide .swiper-wrapper a{
+		display: block;
+    width: 25%;
+    height: 100%;
+	}
+	#swiper-container2 .swiper-slide:nth-child(2) a{
+		background: url(img/花叶.png)no-repeat center top;
+	background-size:30% ;
+	}
+	#swiper-container2 .swiper-slide:nth-child(3) a{
+		background:url(img/定位.png)no-repeat center top; 
+	background-size:30% ;
+	}
+</style>
+<body style="overflow: hidden;">
+<div class="swiper-container1" id="swiper-container3">
+ <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+  <div class="swiper-slide  swiper-slide-active">
+	<div class="sousuo">
+			<img src="img/search.png" alt="" />
+			<input type="text" value="搜目的地、攻略"/>
+			<span></span>
+	</div>
+	<div class="list2-con">
+		<div class="">
+	    <ul class="">
+	    	<li class="banner swiper-container">
+	    	  <div class="swiper-wrapper">
+	    		<div class="swiper-slide">
+	    			
+	    		</div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+               </div>
+               <div class="swiper-pagination"></div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/热门.png" alt="" />
+	    		    <span>本季热门</span>
+	    		    <span>12月最热门的地方</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen">
+	    				<img src="img/huangshan.jpg" alt="" />
+	    				<p>黄山</p>
+	    				<p>位于安徽省黄山.</p>
+	    			</div>
+	    			<div class="img-wen">
+	    				<img src="img/huangshan.jpg" alt="" />
+	    				<p>黄山</p>
+	    				<p>位于安徽省黄山.</p>
+	    			</div>
+	    			<div class="img-wen">
+	    				<img src="img/huangshan.jpg" alt="" />
+	    				<p>黄山</p>
+	    				<p>位于安徽省黄山.</p>
+	    			</div>
+	    		</div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/皇冠.png" alt="" />
+	    		    <span>主题游</span>
+	    		    <span>寻找最适合你的主题</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen">
+	    				<img src="img/qinglv.jpeg" alt="" style="height: 1.5rem;"/>
+	    				<p>情侣</p>
+	    			</div>
+	    			<div class="img-wen">
+	    				<img src="img/miyue.jpg" alt="" />
+	    				<p>蜜月</p>
+	    			</div>
+	    			<div class="img-wen">
+	    				<img src="img/family.jpg" alt="" />
+	    				<p>家庭</p>
+	    			</div>
+	    		</div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/发现.png" alt="" />
+	    		    <span>每日·发现</span>
+	    		    <span>热门精选 旅游谈</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen find">
+	    				<img src="img/ri1.jpg" alt="" />
+	    				<div class="find-zi">
+	    				<p>【酱（这样）紫的约会】</p>
+	    				<p>紫色是一个神秘而富贵的色彩，与幸运和财富、贵族和华贵想关联。紫...</p>
+	    			    </div>
+	    			</div>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen find">
+	    				<img src="img/ri1.jpg" alt="" />
+	    				<div class="find-zi">
+	    				<p>【酱（这样）紫的约会】</p>
+	    				<p>紫色是一个神秘而富贵的色彩，与幸运和财富、贵族和华贵想关联。紫...</p>
+	    			    </div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    		
+	    	</li>
+	    </ul>
+	    </div>
+  </div>
+  <div class="swiper-slide swiper-slide-next">
+	<div class="sousuo">
+			<img src="img/search.png" alt="" />
+			<input type="text" value="搜目的地、攻略"/>
+			<span></span>
+	</div>
+	<div class="list2-con">
+		<div class="">
+	    <ul class="">
+	    	<li class="banner swiper-container">
+	    	  <div class="swiper-wrapper">
+	    		<div class="swiper-slide" style="background: url(img/taiyuan.jpg) no-repeat center;
+    background-size: cover;">
+	    		</div>
+               </div>
+               <div class="swiper-pagination"></div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/热门.png" alt="" />
+	    		    <span>推荐行程</span>
+	    		    <span>ma103016的太原3日经典行程</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen">
+	    				<img src="img/huangshan.jpg" alt="" />
+	    				<p>黄山</p>
+	    			</div>
+	    		</div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/皇冠.png" alt="" />
+	    		    <span>附近推荐</span>
+	    		    <span>周边吃喝行游购</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen">
+	    				<img src="img/family.jpg" alt="" />
+	    				<p>家庭</p>
+	    			</div>
+	    		</div>
+	    	</li>
+	    	<li class="hot">
+	    		<div class="list2-1">
+	    		    <img src="img/发现.png" alt="" />
+	    		    <span>热门游记</span>
+	    		    <span>最新最精华游记</span>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen find">
+	    				<img src="img/ri1.jpg" alt="" />
+	    				<div class="find-zi">
+	    				<p>【酱（这样）紫的约会】</p>
+	    				<p>紫色是一个神秘而富贵的色彩，与幸运和财富、贵族和华贵想关联。紫...</p>
+	    			    </div>
+	    			</div>
+	    		</div>
+	    		<div class="wentu">
+	    			<div class="img-wen find">
+	    				<img src="img/ri1.jpg" alt="" />
+	    				<div class="find-zi">
+	    				<p>【酱（这样）紫的约会】</p>
+	    				<p>紫色是一个神秘而富贵的色彩，与幸运和财富、贵族和华贵想关联。紫...</p>
+	    			    </div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    		
+	    	</li>
+	    </ul>
+	    </div>
+  </div>
+	<link rel="stylesheet" href="css/搜索.css" />
+	<link rel="stylesheet" href="css/person.css" />
+  <div class="swiper-slide">
+	<div class="head">
+		<img src="img/消息.png" alt="" />
+		<span>我的旅行</span>
+		<img src="img/设置.png" alt="" />
+		</div>
+	
+	<div class="per-con">
+		<div class="big-box">
+	<header>
+		<div class="mess">
+			<div class="tou"></div>
+			<div class="xinxi">
+				<p>cheng妾</p>
+			    <p><img src="img/填写.png" alt="" />你住在哪？</p>
+			</div>
+			
+		</div>
+	</header>
+	<div class="fenge">
+		<div class="fenge-hang">
+		<div class="xiaoge">
+			<p>0</p>
+			<p>行程</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>画册</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>点评</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>收藏</p>
+		</div>
+		</div>
+		<div class="fenge-hang">
+		<div class="xiaoge">
+			<p>0</p>
+			<p>关注</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>粉丝</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>游记</p>
+		</div>
+		<div class="xiaoge">
+			<p>0</p>
+			<p>下载</p>
+		</div>
+		</div>
+	</div>
+	<div class="zuji">
+		<div class="zuji-my">
+			<strong>我的足迹地图</strong>
+			<p>我打败了<span>0%</span>驴友</p>
+			<p>&gt;</p>
+		</div>
+		<div class="zui-juti">
+			<div class="contory">
+				<img src="img/006.png" alt="" />
+				<span>0</span>
+				<span>国家</span>
+			</div>
+			<div class="contory">
+				<img src="img/sheng.png" alt="" />
+				<span>0</span>
+				<span>地区</span>
+			</div>
+			<div class="contory">
+				<img src="img/地区.png" alt="" />
+				<span>0</span>
+				<span>目的地</span>
+			</div>
+		</div>
+	    <p class="zongxing">我的总行程超过0公里，再走<span>3/4</span>的路程就抵达月球</p>
+	</div>
+	<div class="per-choice">
+		    <strong>我的旅行纪念册</strong>
+			<p>&gt;</p>
+	</div>
+	<div class="per-choice">
+		    <strong>点评刮刮乐</strong>
+			<p>&gt;</p>
+	</div>
+	<div class="per-choice">
+		    <strong>我的足迹地图</strong>
+			<p>&gt;</p>
+	</div>
+	<div class="per-choice">
+		    <strong>财富值</strong>
+			<p>&gt;</p>
+	</div>
+	<div class="per-choice">
+		    <strong>我的钱包</strong>
+			<p>&gt;</p>
+	</div>
+	<div class="per-choice">
+		    <strong>我的订单</strong>
+			<p>&gt;</p>
+	</div>
+	</div>
+	</div>
+  </div>
+ </div>
+</div>
+<div class="swiper-container11 swiper-container-horizontal" id="swiper-container2">
+	<footer class="swiper-wrapper">
+		<div class="swiper-slide active-nav swiper-slide-visible swiper-slide-active">
+		<a href="javascript:;" >
+			<p>推荐景点</p>
+		</a>
+		</div>
+		<div class="swiper-slide swiper-slide-visible swiper-slide-next" >
+		<a href="javascript:;" class="swiper-slide swiper-slide-prev">
+			<p>当地景点</p>
+		</a>
+		</div>
+		<div class="swiper-slide swiper-slide-visible">
+		<a href="javascript:;" >
+			<p>我的导览</p>
+		</a>
+		</div>
+	</footer>
+</div>
+</body>
+
+<script language="javascript"> 
+
+   window.onload=function(){
+    	resize(750);
+        var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+        });
+        var mySwiper = new Swiper('.swiper-container1',{
+           watchSlidesProgress : true,
+           watchSlidesVisibility : true,
+           
+        })
+         
+var mySwiper2 = new Swiper('#swiper-container2',{
+watchSlidesProgress : true,
+watchSlidesVisibility : true,
+slidesPerView : 3,
+onTap: function(){
+			mySwiper3.slideTo( mySwiper2.clickedIndex)
+		}
+})
+var mySwiper3 = new Swiper('#swiper-container3',{
+
+onSlideChangeStart: function(){
+			updateNavPosition()
+		}
+
+})
+
+function updateNavPosition(){
+		$('#swiper-container2 .active-nav').removeClass('active-nav')
+		var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+console.log(1);
+			if (activeNav.index()>mySwiper2.activeIndex) {
+console.log(2);
+				var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+				mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+			}
+			else {
+console.log(3);
+				mySwiper2.slideTo(activeNav.index())
+			}	
+		}
+	}
+
+    }
+
+</script>
+</html>
