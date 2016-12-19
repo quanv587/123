@@ -1,0 +1,92 @@
+header{
+	width:100%;
+	height:1.3rem;
+	background: #547DF9;
+	position:absolute;
+	display:flex;
+	padding:0 .2rem;
+	box-sizing:border-box;
+	justify-content: center;
+	top:0;left:0;
+	line-height: 1rem;
+}
+*{
+	padding:0;margin:0;
+	list-style: nonne;
+}
+header span{
+	font-size: 0.4rem;
+	color:#FFFFFF
+}
+.ban{
+	width:7.5rem;
+	height:5.5rem;
+	border-bottom:1px dashed #000;
+	margin-top:1.3rem ;
+}
+.ban-con{
+	width:7.5rem;
+	height:5rem;
+	position: relative;
+}
+.ban-con a{
+	display:block;
+	width:7.5rem;
+	height:5rem;
+	position:absolute;
+	top:0;left:0;	
+}
+.ban-con:nth-child(1) a{
+	background: url(../img/ban1.jpg)no-repeat center;	
+	background-size: 100%;
+}
+.ban-con:nth-child(2) a{
+	background: url(../img/ban2.jpg)no-repeat center;	
+	background-size: 110%;
+}
+.ban-con:nth-child(3) a{
+	background: url(../img/ban3.jpg)no-repeat center;	
+	background-size: 120%;
+}
+.ban-con:nth-child(4) a{
+	background: url(../img/ban4.jpg)no-repeat center;	
+	background-size: 100%;
+}
+nav{
+	width: 7.5rem;
+    height: 6rem;
+    margin-top: 0.52rem;
+}
+nav .nav1{
+	width: 7.5rem;
+    height:3rem;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 0.2rem;
+}
+nav .nav1 .list1{
+	display: block;
+	width:2.2rem;
+	height:2.6rem;
+	box-sizing: border-box;
+	padding:0.3rem;
+	border-radius: 0.3rem;
+	background: #F5F5F5;
+	text-decoration: none;
+	color:#000000;
+}
+nav .nav1 .list1 img{
+	width:1.5rem
+}
+nav .nav1 .list1 p{
+	font-size: 0.3rem;
+	margin-left:0.2rem ;
+}
+.swiper-container{
+	width:auto;
+	height:5rem;
+}
+.swiper-slide{
+	width:400%;
+}

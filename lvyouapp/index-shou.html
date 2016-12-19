@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>旅游首页</title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		function resize(originSize,type){
+   				var type=type||"x";
+   				var clientW=document.documentElement.clientWidth;
+   				var clientH=document.documentElement.clientHeight;
+   				if(type=="x"){
+   					var scale=clientW/originSize*100;
+   				}else if(type=="y"){
+   					var scale=clientH/originSize*100;
+   				}
+   				
+   				var html=document.getElementsByTagName("html")[0];
+   				html.style.fontSize=scale+"px";
+   	    }
+    </script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/swiper-3.4.0.jquery.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
+   	<link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+   	<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	<header>
+		<span>自游e派</span>
+	</header>
+	<div class="ban">
+	  <div class="swiper-container">
+		<div class="swiper-wrapper">
+		<div class="ban-con swiper-slide">
+		   <a href="搜索.html"></a>
+		</div>
+		<div class="ban-con swiper-slide">
+		   <a href=""></a>
+		</div>
+		<div class="ban-con swiper-slide">
+		   <a href=""></a>
+		</div>
+		<div class="ban-con swiper-slide">
+		   <a href=""></a>
+		</div>
+		</div>
+	  </div>
+	</div>
+	<nav>
+		<div class="nav1">
+			<a class="list1" href="list2.html">
+				<img src="img/四叶草 (2).png" alt="" />
+				<p>推荐景点</p>
+			</a>
+			<a class="list1" href="搜索.html">
+				<img src="img/枫叶.png" alt="" />
+				<p>城市攻略</p>
+			</a>
+			<a class="list1" href="person.html">
+				<img src="img/定位 (2).png" alt="" />
+				<p>我的导览</p>
+			</a>
+		</div>
+		<div class="nav1">
+			<a class="list1" href="搜索.html">
+				<img src="img/z.png" alt="" />
+				<p>自由行 </p>
+			</a>
+			<a class="list1" href="show.html">
+				<img src="img/收藏_2.png" alt="" />
+				<p>我的动态</p>
+			</a>
+			<a class="list1" href="">
+				<img src="img/设置2.png" alt="" />
+				<p>更多设置</p>
+			</a>
+		</div>
+	</nav>
+</body>
+<script language="javascript"> 
+
+   window.onload=function(){
+    	resize(750)
+        var mySwiper = new Swiper('.swiper-container',{
+                  pagination : '.swiper-pagination',
+                  uniqueNavElements :false,
+        }) 
+    }
+    
+</script>
+</html>

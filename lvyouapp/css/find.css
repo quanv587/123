@@ -1,0 +1,170 @@
+.sousuo{
+	width:7.5rem;
+	height:1rem;
+	/*background: #EEEEEE;*/
+	position:absolute;
+	padding:0 0.2rem;
+	/*display:none;*/
+	z-index: 5;
+}
+.sousuo input{
+	width:5.8rem;
+	height:0.6rem;
+	position:absolute;
+	top:0;bottom:0;margin:auto 0;left:0.3rem;
+	border:0;
+	box-sizing: border-box;
+	padding-left:0.7rem;
+	background:#000000;
+	opacity: 0.3;color: white;
+}
+.sousuo img{
+	position:absolute;
+	top:0;bottom:0;margin:auto 0;
+	left:0.5rem;
+	width:0.4rem;
+	z-index: 3;
+}
+.sousuo span{
+	position:absolute;
+	top:0;bottom:0;margin:auto 0;
+	right:0.7rem;
+	width:0.7rem;
+	height:0.6rem;
+	background: url(../img/摇一摇反馈.png) no-repeat center top;
+	background-size: 80%;
+}
+.list2-con{
+	width:7.5rem;
+	height:12.24rem;
+	overflow: auto;
+	    background: white;
+}
+.list2-con ul{
+	width:7.5rem;
+	height:auto;
+}
+.list2-con ul li{
+	width:100%;
+	height:auto;
+}
+.list2-con ul .banner{
+	width:7.5rem;
+	height:8.1rem;
+	border-bottom:0.2rem solid #CCCCCC;
+}
+.swiper-slide:nth-child(1){
+	background: url(../img/list-b1.jpg) no-repeat center;
+	background-size:cover;
+}
+.swiper-slide:nth-child(2){
+	background: url(../img/list-b2.jpg) no-repeat center;
+	background-size:cover;
+}
+
+.swiper-slide:nth-child(3){
+	background: url(../img/list-b3.jpg) no-repeat center;
+	background-size:cover;
+}
+
+.swiper-slide:nth-child(4){
+	background: url(../img/list-b4.jpg) no-repeat center;
+	background-size:cover;
+}
+.swiper-pagination{
+	bottom:2rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom:2.7rem;
+}
+.swiper-pagination-bullet-active{
+	background: #FFFFFF;
+}
+ul,li{
+	margin:0;padding:0;lisr-style:none;
+}
+.list2-con ul .hot{
+	box-sizing: border-box;
+	padding:0 0.2rem;
+	border-bottom: 0.2rem solid #ccc;
+}
+.list2-con ul .hot .wentu{
+	width:100%;height: 2.6rem;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	    top: .2rem;
+}
+.list2-con ul .hot .list2-1{
+	width:100%;height:1.5rem;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	    top: .2rem;
+}
+.list2-con ul .hot .list2-1{
+	top:0.1rem;left:0;
+}
+.list2-con ul .hot .list2-1 img{
+	width:1rem;
+	position:absolute;
+	left:0.2rem;
+	top:0.4rem;
+}
+.list2-con ul .hot .list2-1 span{
+	font-size:0.4rem;
+}
+.list2-con ul .hot .list2-1 span:nth-child(2){
+	position:absolute;
+	left:1.7rem;top:0.4rem;
+}
+.list2-con ul .hot .list2-1 span:nth-child(3){
+	position:absolute;
+	left:1.7rem;top:1rem;
+	color:orangered;
+	font-size: 0.3rem;
+}
+.list2-con ul .hot .wentu .img-wen{
+	width:2.2rem;
+	height:2.1rem;
+}
+.list2-con ul .hot .wentu .img-wen img{
+	width:2.2rem;
+}
+.list2-con ul .hot .wentu .img-wen p{
+	font-size:0.2rem;
+}
+.list2-con ul .hot .wentu .img-wen p:nth-child(2){
+	font-size:0.3rem;
+}
+.list2-con ul .hot:nth-child(3) span:nth-child(3),.list2-con ul .hot:nth-child(4) span:nth-child(3){
+	color:#999;
+}
+.list2-con ul .hot .wentu .find{
+	width:7.5rem;
+	height:auto;
+	display: flex;
+	justify-content: space-between;
+	box-sizing:border-box;
+	padding:0 0.2rem;
+	margin-top:0.2rem;
+}
+.list2-con ul .hot .find img{
+	width:2rem;
+}
+.list2-con ul .hot .find .find-zi{
+	box-sizing:border-box;
+	padding:0 0.2rem;
+	width:5rem;
+}
+.list2-con ul .hot .find .find-zi p:nth-child(1){
+	margin-top:0.2rem;
+	font-size:0.35rem;
+}
+.list2-con ul .hot .find .find-zi p:nth-child(2){
+	margin-top:0.2rem;
+	font-size:0.2rem;
+	color:#999999;
+}
